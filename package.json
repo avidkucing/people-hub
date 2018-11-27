@@ -25,5 +25,14 @@
   "bugs": {
     "url": "https://github.com/avidkucing/people-hub/issues"
   },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Hello, world!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  },
   "homepage": "https://github.com/avidkucing/people-hub#readme"
 }

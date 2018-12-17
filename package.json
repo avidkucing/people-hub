@@ -8,10 +8,8 @@
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.4",
     "passport": "^0.4.0",
-    "passport-google-oauth": "^1.0.0",
-    "pug": "^2.0.3"
+    "passport-google-oauth": "^1.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
@@ -24,15 +22,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/avidkucing/people-hub/issues"
-  },
-  "cloud-repo-tools": {
-    "test": {
-      "app": {
-        "msg": "Hello, world!"
-      }
-    },
-    "requiresKeyFile": true,
-    "requiresProjectId": true
   },
   "homepage": "https://github.com/avidkucing/people-hub#readme"
 }

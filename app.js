@@ -7,8 +7,6 @@ const express = require('express'),
 
 auth(passport);
 
-app.set('view engine', 'pug');
-
 app.use(passport.initialize());
 
 app.use(cookieSession({
@@ -21,16 +19,14 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
     if (req.session.token) {
         res.cookie('token', req.session.token);
-        //res.json({
-          //  status: 'session cookie set'
-        //});
-        res.render('profile');
+        res.json({
+            status: 'session cookie set'
+        });
     } else {
         res.cookie('token', '')
-        //res.json({
-          //  status: 'session cookie not set'
-        //});
-        res.render('index');
+        res.json({
+            status: 'session cookie not set'
+        });
     }
 });
 

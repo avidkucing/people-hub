@@ -2,7 +2,7 @@
   "name": "people-hub",
   "version": "1.0.0",
   "description": "API ini memudahkan pengguna untuk mengatur data-data terkait orang-orang dan identitas, ciri-ciri, ataupun karakteristik mereka.",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-beta.3",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

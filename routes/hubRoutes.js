@@ -4,7 +4,8 @@ module.exports = function(app) {
     // hub Routes
     app.route('/hub')
       .get(hub.list_all_hub)
-      .post(hub.create_a_hub);
+      .post(hub.create_a_hub)
+      .delete(hub.delete_all_hub);
   
   
     app.route('/hub/:hubId')

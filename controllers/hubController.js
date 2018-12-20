@@ -9,9 +9,6 @@ exports.list_all_hub = function(req, res) {
   });
 };
 
-
-
-
 exports.create_a_hub = function(req, res) {
   var new_hub = new hub(req.body);
   new_hub.save(function(err, hub) {
@@ -21,7 +18,6 @@ exports.create_a_hub = function(req, res) {
   });
 };
 
-
 exports.read_a_hub = function(req, res) {
   hub.findById(req.params.hubId, function(err, hub) {
     if (err)
@@ -30,7 +26,6 @@ exports.read_a_hub = function(req, res) {
   });
 };
 
-
 exports.update_a_hub = function(req, res) {
   hub.findOneAndUpdate({_id: req.params.hubId}, req.body, {new: true}, function(err, hub) {
     if (err)
@@ -38,7 +33,6 @@ exports.update_a_hub = function(req, res) {
     res.json(hub);
   });
 };
-
 
 exports.delete_a_hub = function(req, res) {
 
@@ -50,3 +44,12 @@ exports.delete_a_hub = function(req, res) {
     res.json({ message: 'hub successfully deleted' });
   });
 };
+
+exports.delete_all_hub = function(req, res) {
+
+    hub.remove({}, function(err, hub) {
+      if (err)
+        res.send(err);
+      res.json({ message: 'all hub successfully deleted' });
+    });
+  };

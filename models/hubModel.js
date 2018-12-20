@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
   var Schema = mongoose.Schema;
 
   var hubSchema = new Schema({
-    id:  Number,
-    people: [Number],
+    peopleId: [Number],
     blocks: [String],
   });
 

@@ -4,7 +4,7 @@ const express = require('express'),
     auth = require('./auth');
     cookieParser = require('cookie-parser'),
     cookieSession = require('cookie-session');
-    port = 3000;
+    port = process.env.PORT || 3000;
 
 app.set('view engine', 'pug');
 auth(passport);

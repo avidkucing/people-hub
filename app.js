@@ -1,12 +1,13 @@
 const express = require('express'),
     app = express(),
     passport = require('passport'),
-    auth = require('./auth');
+    auth = require('./auth'),
     cookieParser = require('cookie-parser'),
     cookieSession = require('cookie-session'),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
     hub = require('./models/hubModel'), 
+    people = require('./models/peopleModel'), 
     bodyParser = require('body-parser');
 
 app.set('view engine', 'pug');
@@ -18,8 +19,10 @@ mongoose.connect('mongodb://localhost/people-hub-db');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./routes/hubRoutes'); //importing route
-routes(app); //register the route
+var hubRoutes = require('./routes/hubRoutes'); //importing route
+var peopleRoutes = require('./routes/peopleRoutes'); //importing route
+hubRoutes(app); //register the route
+peopleRoutes(app); //register the route
 
 app.use(passport.initialize());
 

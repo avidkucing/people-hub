@@ -1,4 +1,4 @@
-*People Hub
+# People Hub
 
 API ini memudahkan pengguna untuk mengatur data-data terkait orang-orang dan identitas, ciri-ciri, ataupun karakteristik mereka.
 
@@ -13,24 +13,36 @@ Cara install lokal (server sering internal error):
 
 API documentation:
 
-rootURL: localhost:8080
+~ means rootURL: localhost:8080
 
-~/hub
-    get: get all hub
-    post: create a hub, bergantung parameter pada request body
-    delete: delete all hub
+> ~/hub
 
-~/hub/:hubId
-    get: get the hub
-    post: update the hub, bergantung parameter pada request body
-    delete: delete the hub
+GET: Get all hub.
 
-~/hub/:hubId/people
-    get: get all people in the hub
-    post: create a people (person), bergantung parameter pada request body
-    delete: delete all people
+POST: Create a hub, bergantung parameter pada request body.
 
-~/hub/:hubId/people/:peopleId
-    get: get the people (person)
-    post: update a people (person), bergantung parameter pada request body
-    delete: delete the people (person)
+DELETE: Delete all hub.
+
+> ~/hub/:hubId
+
+GET: Get the hub.
+
+POST: Update the hub, bergantung parameter pada request body.
+
+DELETE: Delete the hub.
+
+> ~/hub/:hubId/people
+
+GET: Get all people in the hub.
+
+POST: Create a people (person), bergantung parameter pada request body.
+
+DELETE: Delete all people.
+
+> ~/hub/:hubId/people/:peopleId
+
+GET: Get the people (person).
+
+POST: Update a people (person), bergantung parameter pada request body.
+
+DELETE: Delete the people (person).
